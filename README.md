@@ -13,6 +13,8 @@ This project focuses on leveraging retrieval-augmented generation (RAG) and prom
 
 ## Codes 🛠️
 
+Before you run the code please register a deepseek or other model's api key and place it in the utils.py file.
+
 ### 1_data_acquire.py
 Using Web Crawler to crawl the data down and store them into a data1.jsonl file
 
@@ -44,4 +46,5 @@ You can quickly install the corresponding dependencies,
 ```bash
 pip install -r requirements.txt
 ```
+## Example 
 
