@@ -1,6 +1,10 @@
 # RAG-PEM
 Retrieval-Augmented Generation for Potential Event Mining
 
+<p align='center'>
+  <img height='40%'  src='assets/logo.png' />
+</p>
+
 ## Overview 📚
 This project focuses on leveraging retrieval-augmented generation (RAG) and prompt engineering to analyze online statements and events, assessing their potential public opinion risks. By integrating historical public opinion data, a domain-specific knowledge base, and large language models (LLMs), the system extracts key viewpoints, measures sentiment intensity, and compares similar past events to aid public opinion analysis.
 
