@@ -2,7 +2,7 @@
 Retrieval-Augmented Generation for Potential Event Mining
 
 <p align='center'>
-  <img height='40%'  src='assests/logo.png' />
+  <img height='40%'  src='assets/logo.png' />
 </p>
 
 ## Overview 📚
