@@ -36,7 +36,7 @@ You can choose task = delete to utilize this method.
 You can choose task = delete to utilize this method.
 
 ### 2.5_chunk_paragraph.ipynb
-Chunk the texts and encoding them using [all-mpnet-base-v2](all-mpnet-base-v2)
+Chunk the texts and encoding them using [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)
 
 ### 3_construct_base.ipynb
 + **Implement a retrieval-augmented generation (RAG) pipeline for public opinion event analysis by leveraging FAISS for efficient text similarity search and SentenceTransformer for embedding generation.**
