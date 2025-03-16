@@ -1,0 +1,10 @@
+flask
+faiss-cpu
+sentence-transformers
+gdown
+numpy
+requests
+openai
+time
+json
+numpy
