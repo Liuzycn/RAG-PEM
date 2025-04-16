@@ -5,12 +5,30 @@ Retrieval-Augmented Generation for Potential Event Mining （基于检索增强�
   <img height='40%'  src='assets/logo2.png' />
 </p>
 
-## Overview 📚
+## 概述 📚
 本项目设计了一种基于检索增强生成（RAG）的大语言模型辅助舆情事件分析平台，旨在帮助用户分析尚未发酵的舆情，判断其是否具有较强的负面性及其原因。通过爬虫技术和整合现有舆情数据，获取了2023-2025年的舆情信息，确保知识库的时效性。采用基于句子相似度突变的文档分割方法，有效提高了信息独立性，避免了过长文档导致的信息重叠。平台最终实现了通过交互式网页，满足用户的舆情分析与问答需求。
 
-## Key Features & Implementation ✨
+项目组织图如下：
 
-### 数据来源✨
+``` bash
+├─RAG-PEM
+|       ├─1_data_acquire.py
+        ├─2_text_cut.py
+        ├─2_merge_datafile.py
+        ├─2.5_chunk_paragraph.ipynb
+        ├─3_generate_embeddings.py
+        ├─4_question_answer.ipynb
+        ├─utils.py
+        ├─README.md
+        ├─requirements.txt
+|       ├─backend
+|       |  ├─Procfile
+|       |  ├─app.py
+|       |  ├─utils.py
+|       |  └requirements.txt
+```
+
+## 数据来源✨
 
 + **收集来自[蚁坊软件网站](https://www.eefung.com/yanjiu/)与[OpenDataLab](https://opendatalab.com/OpenDataLab/OpenNewsArchive)的数据，共计约5万条.**
 + **在运行代码之前需要先注册一个大语言模型（LLM）的api-key，[火山方舟管理控制台](https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW)，然后把该api-key放在utils.py文件下。**
