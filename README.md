@@ -1,12 +1,12 @@
 # RAG-PEM
-Retrieval-Augmented Generation for Potential Event Mining
+Retrieval-Augmented Generation for Potential Event Mining （基于检索增强生成的潜在舆情事件挖掘）
 
 <p align='center'>
   <img height='40%'  src='assets/logo.png' />
 </p>
 
 ## Overview 📚
-This project focuses on leveraging retrieval-augmented generation (RAG) and prompt engineering to analyze online statements and events, assessing their potential public opinion risks. By integrating historical public opinion data, a domain-specific knowledge base, and large language models (LLMs), the system extracts key viewpoints, measures sentiment intensity, and compares similar past events to aid public opinion analysis.
+本项目设计了一种基于检索增强生成（RAG）的大语言模型辅助舆情事件分析平台，旨在帮助用户分析尚未发酵的舆情，判断其是否具有较强的负面性及其原因。通过爬虫技术和整合现有舆情数据，获取了2023-2025年的舆情信息，确保知识库的时效性。采用基于句子相似度突变的文档分割方法，有效提高了信息独立性，避免了过长文档导致的信息重叠。平台最终实现了通过交互式网页，满足用户的舆情分析与问答需求。
 
 ## Key Features & Implementation ✨
 
