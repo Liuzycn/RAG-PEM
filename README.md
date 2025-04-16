@@ -52,10 +52,10 @@ Retrieval-Augmented Generation for Potential Event Mining （基于检索增强�
 + **部分文字、图片来自网络，如涉及侵权，请及时与我们联系，我们会在第一时间删除或处理侵权内容。电话：负责人: **
 
 ### 2_merge_datafile.py
-本脚本用于加载来自OpenDataLab的舆情原始数据，提取正文内容并使用 Sentence-BERT 模型生成向量，结合 process_news 方法完成文本预处理，便于后续相似度计算或下游任务分析
+本脚本用于加载来自OpenDataLab的舆情原始数据，提取正文内容并使用 Sentence-BERT 模型生成向量，结合 process_news 方法完成文本预处理，便于后续相似度计算或下游任务分析。
 
 ### 2.5_chunk_paragraph.ipynb
-分割与编码数据，利用[all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)模型编码文本数据
+分割与编码数据，利用[all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)模型编码文本数据。
 
 ### 3_generate_embeddings.py
 本脚本用于对分割后的舆情文本片段批量生成 Sentence-BERT 向量表示，并将每条文本及其对应的向量保存为 JSONL 文件，方便后续用于检索或建库。
@@ -76,3 +76,5 @@ pip install -r requirements.txt
 </p>
 
 ## 后端与前端实现
+backend 文件夹包含使用 Flask 框架编写的后端实现代码。
+frontend 前端代码链接[RAG-PEM-Frontend](https://github.com/Liuzycn/RAG-PEM-Frontend)
