@@ -13,19 +13,24 @@ Retrieval-Augmented Generation for Potential Event Mining （基于检索增强�
 ``` bash
 ├─RAG-PEM
 |       ├─1_data_acquire.py
-        ├─2_text_cut.py
-        ├─2_merge_datafile.py
-        ├─2.5_chunk_paragraph.ipynb
-        ├─3_generate_embeddings.py
-        ├─4_question_answer.ipynb
-        ├─utils.py
-        ├─README.md
-        ├─requirements.txt
+|       ├─2_text_cut.py
+|       ├─2_merge_datafile.py
+|       ├─2.5_chunk_paragraph.ipynb
+|       ├─3_generate_embeddings.py
+|       ├─4_question_answer.ipynb
+|       ├─utils.py
+|       ├─README.md
+|       |-requirements.txt
 |       ├─backend
 |       |  ├─Procfile
 |       |  ├─app.py
 |       |  ├─utils.py
 |       |  └requirements.txt
+|       ├─frontend
+|       |  ├─index.html
+|       |  ├─css
+|       |  ├─javascripts
+|       |  └......
 ```
 
 ## 数据来源✨
