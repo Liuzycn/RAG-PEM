@@ -10,33 +10,29 @@ Retrieval-Augmented Generation for Potential Event Mining （基于检索增强�
 
 ## Key Features & Implementation ✨
 
-### 1. Data Preprocessing
+### 数据来源✨
 
-+ **Collecting the data from [蚁坊软件网站](https://www.eefung.com/yanjiu/).**
-+ **1189 pieces of data in total.**
++ **收集来自[蚁坊软件网站](https://www.eefung.com/yanjiu/)与[OpenDataLab](https://opendatalab.com/OpenDataLab/OpenNewsArchive)的数据，共计约5万条.**
++ **在运行代码之前需要先注册一个大语言模型（LLM）的api-key，[火山方舟管理控制台](https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW)，然后把该api-key放在utils.py文件下。**
 
-## Codes 🛠️
-
-Before you run the code please register a deepseek or other model's api key and place it in the utils.py file.
+## 代码 🛠️
 
 ### 1_data_acquire.py
-Using Web Crawler to crawl the data down and store them into a data1.jsonl file
+本脚本用于批量爬取蚁坊软件网站“研究”栏目下的舆情文章，包括标题、时间、正文和链接，并将结果保存为 JSONL 文件，便于后续的舆情分析或知识库构建。
 
 ### 2_text_cut.py
-This code file provides two options to process the codes.
+本脚本用于调用大语言模型对舆情文本进行清洗或摘要，支持去除广告等无关信息或提取事件核心内容，并将处理结果保存为 JSONL 文件。
 
-### One is only to delete the meaningless information in the raw data like:
+### 无关信息如下:
 + **舆情分析报告自动生成工具免费试用入口>>> **
 + **相关阅读推荐：舆情简评｜ **
 + **部分文字、图片来自网络，如涉及侵权，请及时与我们联系，我们会在第一时间删除或处理侵权内容。电话：负责人: **
 
-You can choose task = delete to utilize this method.
-
-### The other is to summarize the content in the data by using the LLM
-You can choose task = delete to utilize this method.
-
 ### 2.5_chunk_paragraph.ipynb
-Chunk the texts and encoding them using [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)
+分割与编码数据，利用[all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)模型编码文本数据
+
+### 3_generate_embeddings.py
+本脚本用于对分割后的舆情文本片段批量生成 Sentence-BERT 向量表示，并将每条文本及其对应的向量保存为 JSONL 文件，方便后续用于检索或建库。
 
 ### 3_construct_base.ipynb
 + **Implement a retrieval-augmented generation (RAG) pipeline for public opinion event analysis by leveraging FAISS for efficient text similarity search and SentenceTransformer for embedding generation.**
