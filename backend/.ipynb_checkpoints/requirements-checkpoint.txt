@@ -1,0 +1,10 @@
+flask
+flask-cors
+openai
+volcengine-python-sdk
+faiss-cpu
+gdown
+sentence-transformers
+numpy
+gunicorn
+huggingface_hub
