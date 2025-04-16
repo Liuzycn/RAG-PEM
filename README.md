@@ -47,5 +47,9 @@ Retrieval-Augmented Generation for Potential Event Mining （基于检索增强�
 ```bash
 pip install -r requirements.txt
 ```
-## Example 
+## Mistral模型对于是否使用RAG的不同回答 📦
+<p align='center'>
+  <img height='40%'  src='assets/example.png' />
+</p>
 
+## 后端与前端实现
