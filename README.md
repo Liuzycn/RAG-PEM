@@ -2,7 +2,7 @@
 Retrieval-Augmented Generation for Potential Event Mining （基于检索增强生成的潜在舆情事件挖掘）
 
 <p align='center'>
-  <img height='40%'  src='assets/logo.png' />
+  <img height='40%'  src='assets/logo2.png' />
 </p>
 
 ## Overview 📚
